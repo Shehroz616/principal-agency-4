@@ -1,0 +1,143 @@
+body,h1 {
+    font-family : nunito,helveticaneue,helvetica neue,Helvetica,Arial,sans-serif;
+    }
+p{
+	margin: 0 0 5px;
+}
+.table-striped>thead>tr>th , .paginate_button.current{
+    background-color: #34a6db !important;
+    color: white !important;
+}
+.item_price{
+    background-color: #34a6db;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 3px;
+    display: inline-block;
+}
+table.dataTable thead th, table.dataTable thead td{
+    border: none !important;
+    border-radius: 0px !important;
+    padding: 8px 10px !important;
+}
+.table-striped>thead>tr>th, .paginate_button.current{
+    background-color: #22bf44 !important;
+}
+.table-striped>tbody>tr:nth-of-type(2n+1){
+    background-color: white !important;
+}
+#js-table-list{
+    border-radius: 5px 5px 0px 0px;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px #cacaca;
+    border: none !important;
+}
+.item_view{
+    /* background-color: #34a6db;
+    padding: 3px 8px;
+    color: white;
+    border-radius: 3px; */
+}
+.crd_btns{
+    width: 29%;
+    margin: 0px 1%;
+    padding: 5px 0px !important;
+    font-size: 12px !important;
+    text-align: center;
+}
+.item_name{
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+
+.mark_btns{
+    width: 46%;
+    padding: 5px 0px !important;
+    margin: 0px 1%;
+    font-size: 12px !important;
+    text-align: center;
+}
+.share_btn{
+    width: 96%;
+    padding: 5px 0px !important;
+    margin: 0px 1%;
+    font-size: 12px !important;
+    text-align: center;
+}
+.flexx {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.flexx>p{
+    width: 49%;
+}
+.flexx>p:nth-child(odd){
+    border-right: 1px solid rgba(128, 128, 128, 0.452);
+}
+.label{
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+.dataTables_wrapper .dataTables_filter input{
+    background-color: white;
+    height: 30px;
+    line-height: 30px;
+    border: none;
+    margin: 0px;
+}
+.dataTables_wrapper .dataTables_filter input.focus-visible{
+    border: none !important;
+}
+
+.dataTables_filter{
+    border: 1px solid;
+    border-color: #88888888;
+    padding: 0px 10px;
+    border-radius: 3px;
+    color: #88888888;
+    transition: all .5s;
+    text-align: left !important;
+}
+
+@media(max-width:576px){
+    .flexx{
+        flex-wrap: wrap;
+    }
+    .flexx>p{
+        width: 100%;
+    }
+    .flexx>p:nth-child(odd){
+        border-right: none;
+    }
+    .myTable p{
+        font-size: 12px;
+    }
+    .crd_btns{
+        font-size: 12px;
+    }
+    .mark_btns{
+        font-size: 10px !important;
+        width: 45%;
+    }
+    .share_btn{
+        font-size: 12px;
+    }
+}
+@media(max-width:375px){
+    .mark_btns{
+        width: 45%;
+        font-size: 10px !important;
+    }
+    .crd_btns{
+        font-size: 10px !important;
+    }
+    .share_btn{
+        font-size: 10px !important;
+
+    }
+}
+

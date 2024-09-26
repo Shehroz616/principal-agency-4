@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Principal</title>
+</head>
+
+<body>
+    <img class="img-fluid full-width-img" src="assets/images/main-bg.png" alt="image">
+    <img class="mob-img" src="assets/images/mob-bg.png" alt="group-image">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="logo">
+                    <img src="assets/images/logo.png">
+                </div>
+                <h1 class="main-line">Q3 Agency<br>Kick-Off 2024</h1>
+                <img class="img-fluid small" src="assets/images/small.svg" alt="image">
+                <div class="comming-soon">You will be able to login on 10 July 2024</div>
+
+                <div id="id01" class="modal">
+                    <form class="modal-content animate">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                                title="Close Modal">&times;</span>
+                        </div>
+
+                        <div class="container">
+                            <h2>Login</h2>
+                            <div class="input-container">
+                                <input type="text" placeholder="Name as per I.C." name="uname" required>
+                                <span class="required">*Mandatory</span>
+                            </div>
+
+                            <div class="input-container">
+                                <input type="text" placeholder="Agent Code" name="Code" required>
+
+                                <span class="required">*Mandatory</span>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" placeholder="Region/ State" name="agentcode" required>
+
+                                <span class="required">*Mandatory</span>
+                            </div>
+                            
+                            <div class="consent-section">
+                                <input type="checkbox" id="consent-checkbox" name="consent">
+                                <p>By clicking ‘Submit’, you hereby agree and consent to allow your personal data
+                                    and/or information being collected, processed and used (“processed”) by
+                                    Principal Asset Management Berhad (“Principal”) in accordance with Principal
+                                    Privacy Notice, which may be viewed at <a
+                                        href="https://www.principal.com.my/en/privacy-notice-my (“Privacy Notice”)"></a>
+                                    . In addition and without prejudice to the terms in Principal Privacy Notice,
+                                    you agree and consent to your personal data and/or information being processed
+                                    and used by Principal for the purpose of registration to Principal Q3 Agency
+                                    Kick-Off 2024.</p>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="back-button-1">
+                                    <button class="button-modal" type="submit">Submit</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6 p-0">
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // Close the modal when clicking outside of it
+        window.onclick = function (event) {
+
+            if (event.target == document.getElementById('id01')) {
+                document.getElementById('id01').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

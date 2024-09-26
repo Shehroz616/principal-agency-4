@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <title>Principal</title>
+</head>
+
+<body>
+    <section class="agency-bg">
+        <nav>
+            <div class="container-fluid px-lg-5 px-3 header">
+                <div class="row">
+                    <div class="col-lg-4 col-6 logo1">
+                        <img class="img-fluid" src="assets/images/final-logo.png" alt="logo">
+                    </div>
+                    <div class="col-lg-4 col-6 ms-auto picture">
+                        <img src="assets/images/logo1.svg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid px-lg-5 px-3 pb-4">
+            <div class="row gy-4 gx-md-4 gx-sm-0">
+                
+                <div class="col-lg-7">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/W6NZfCO5SIk" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="button-container">
+                        <button class="action-button" type="button" data-bs-toggle="modal" data-bs-target="#questionModal">Ask the Speaker a Question</button>
+                    </div>
+                </div>
+                <div class="col-lg-5 ">
+                    <iframe id="chat"
+                        src='https://takemychat.com/widget/110?email=<?php echo $useremail;  ?>&name=<?php echo $fullname;  ?>'
+                        id='principal-agency-kick-off-2024' data-name='principal-agency-kick-off-2024'></iframe>
+                    <div class="button-container">
+                        <button class="action-button yellow " type="button">
+                            <div> Play GET SET, GO! </div>| <span> 150 prizes up for grabs! </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="winners-count-bottom">
+                <img src="assets/images/winners-tag-top-right.png" alt="">
+                <span>100</span>
+            </div>
+        </div>
+
+        <div class="game-section">
+            <div class="overlay"></div>
+            <div class="game-container">
+                <div class="game-header">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="assets/images/logo1.svg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-6 text-end">
+                            <div class="winners-count">
+                                <img src="assets/images/winners-tag-top-right.png" alt="">
+                                <span>100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-1 steps show">
+                    <img src="assets/images/get-set-go.svg" class="w-100" alt="">
+                    <div class="instrution-box">
+                        <h5>Embark on the Final Sprint through 2024 and play Agents’ Odyssey for a chance to win a reward!</h5>
+                    </div>
+                    <div class="rewards-container my-4 text-center">
+                        <img src="assets/images/reward-box.svg" class="reward-box" alt="">
+                        <img src="assets/images/game-top-chracters.svg" class="img-fluid chracters" alt="">
+                    </div>
+                    <div class=" button-container start-btn" id="startBtn">
+                        <button class="action-button" type="button">Play now</button>
+                    </div>
+                    
+                </div>
+                <div class="step-2 steps">
+                    <div class="inner-game-header">
+                        <img src="assets/images/get-set-go-with-characters.svg" class="w-100" alt="">
+                    </div>
+                    <div class="inner-game-area">
+                        <img src="assets/images/start-game-bg.png" class="w-100" alt="">
+                        <div class="inner-game-content">
+                            <p class="font-18">You need to answer the quiz correctly to proceed to the next one. Complete all quizzes successfully for a chance to win prizes!</p>
+                            <div class="button-container start-btn next-level">
+                                <button class="action-button" type="button">Start</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-3 steps">
+                    <div class="inner-game-header">
+                        <img src="assets/images/get-set-go-with-characters.svg" class="w-100" alt="">
+                    </div>
+                    <div class="inner-game-area">
+                        <img src="assets/images/map-level-1.png" class="w-100" alt="">
+                        <div class="inner-game-content">
+                            <span class="level-tag">Level 1</span>
+                            <p class="font-16 cloud-text-1">On equities, quality and dividend-paying stocks are for their defensive characteristics, which can provide resilience in the face of uncertain macroeconomic and geopolitical conditions.</p>
+                            <p class="font-16 cloud-text-2">We analyze the company first then the sector/industry before looking into the overall economic fundamentals.</p>
+                            <div class="question-box">
+                                What are the above scenarios described as?
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                                <label class="answer-box">Top-down ideas</label>
+                                <label class="answer-box">Bottom-down ideas</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-4 steps">
+                    <div class="inner-game-header">
+                        <img src="assets/images/get-set-go-with-characters.svg" class="w-100" alt="">
+                    </div>
+                    <div class="inner-game-area">
+                        <img src="assets/images/map-level-2.png" class="w-100" alt="">
+                        <div class="inner-game-content">
+                            <span class="level-tag">Level 2</span>
+                            <div class="question-box my-4">
+                                Is the following statement True or False?
+                            </div>
+                            <p class="font-18">“We do not prefer diversification approach to ride out volatilities arising from geopolitical tensions, inflationary issues, and concerns of economic slowdown.”</p>
+                            
+                            <div class="d-flex justify-content-between w-100 align-items-center mt-auto mb-5">
+                                <label class="answer-box my-0">True</label>
+                                <label class="answer-box my-0">False</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-5 steps">
+                    <div class="inner-game-header">
+                        <img src="assets/images/get-set-go-with-characters.svg" class="w-100" alt="">
+                    </div>
+                    <div class="inner-game-area">
+                        <img src="assets/images/map-level-3.png" class="w-100" alt="">
+                        <div class="inner-game-content">
+                            <span class="level-tag">Level 3</span>
+                            <div class="question-box my-4">
+                                What are Principal ESG-related funds?
+                            </div>
+                            <div class="d-flex flex-column align-items-center my-auto">
+                                <label class="answer-box">Principal Global Sustainable Growth Fund</label>
+                                <label class="answer-box">Principal ESC Growth 1 Fund</label>
+                                <label class="answer-box">Principal Islamic Global Responsible Equity Fund</label>
+                                <label class="answer-box">Principal Responsible Global Islamic Fund</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-6 steps">
+                    <div class="inner-game-header">
+                        <img src="assets/images/get-set-go-with-characters.svg" class="w-100" alt="">
+                    </div>
+                    <div class="inner-game-area">
+                        <img src="assets/images/map-level-4.png" class="w-100" alt="">
+                        <div class="inner-game-content">
+                            <span class="level-tag">Level 4</span>
+                            <div class="question-box my-4">
+                                Select the new funds launched in 2024.
+                            </div>
+                            <div class="d-flex flex-column align-items-center my-auto">
+                                <label class="answer-box">Principal China Quality Growth Fund</label>
+                                <label class="answer-box">Principal China New Energy Innovation Fund</label>
+                                <label class="answer-box">Principal Vietnam Equity Fund</label>
+                                <label class="answer-box">Principal Islamic Global Responsible Equity</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-7 steps">
+                    <div class="inner-game-header">
+                        <img src="assets/images/get-set-go-with-characters.svg" class="w-100" alt="">
+                    </div>
+                    <div class="inner-game-area">
+                        <img src="assets/images/map-level-5.png" class="w-100" alt="">
+                        <div class="inner-game-content">
+                            <span class="level-tag">Level 5</span>
+                            <p class="font-20 mb-0 mt-3">Royale Premier 2025</p>
+                            <div class="question-box my-4">
+                                What are the incentive requirements for All-Ranks Personal Sales? Double Qualifier
+                            </div>
+                            <div class="d-flex flex-column align-items-center my-auto">
+                                <label class="answer-box">5 Million Net Points (UT) + RM120K Sales (PRS)</label>
+                                <label class="answer-box">6 Million Net Points (UT) + RM100K Sales (PRS)</label>
+                                <label class="answer-box">6 Million Net Points (UT) + RM120K Sales (PRS)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-9 steps">
+                    <div class="inner-game-header">
+                        <img src="assets/images/get-set-go-with-characters.svg" class="w-100" alt="">
+                    </div>
+                    <div class="inner-game-area">
+                        <img src="assets/images/map-level-6.png" class="w-100" alt="">
+                        <div class="inner-game-content">
+                            <span class="level-tag">Level 6</span>
+                            <p class="font-20 mb-0 mt-3">Premier Club 2025</p>
+                            <div class="question-box my-4">
+                                What are the incentive requirements for All-Ranks Personal Sales? Single Qualifier
+                            </div>
+                            <div class="d-flex flex-column align-items-center my-auto">
+                                <label class="answer-box">1.8 Million Net Points (UT) + RM100K Sales (PRS)</label>
+                                <label class="answer-box">2 Million Net Points (UT) + RM80K Sales (PRS)</label>
+                                <label class="answer-box">1.8 Million Net Points (UT) + RM80K Sales (PRS)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-10 steps">
+                    <div class="inner-game-header">
+                        <img src="assets/images/get-set-go-with-characters.svg" class="w-100" alt="">
+                    </div>
+                    <div class="inner-game-area">
+                        <img src="assets/images/map-level-7.png" class="w-100" alt="">
+                        <div class="inner-game-content">
+                            <span class="level-tag">Level 7</span>
+                            <p class="font-20 mb-0 mt-3">Premier Club Aspiration 2025</p>
+                            <div class="question-box my-4">
+                                What are the incentive requirements for All-Ranks Personal Sales? Single Qualifier
+                            </div>
+                            <div class="d-flex flex-column align-items-center my-auto">
+                                <label class="answer-box">1.3 Million Net Points (UT) + RM20K Sales (PRS)</label>
+                                <label class="answer-box">1.2 Million Net Points (UT) + RM30K Sales (PRS)</label>
+                                <label class="answer-box">1.0 Million Net Points (UT) + RM30K Sales (PRS)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-11 steps">
+                    <div class="text-center">
+                        <img src="assets/images/get-set-go.svg" class="img-fluid" alt="">
+                        <img src="assets/images/win-characters.svg" class="winner-header img-fluid" alt="">
+                    </div>
+                    <div class="winner-tag">
+                        <img src="assets/images/game-win.png" class="img-fluid" alt="">
+                        <img src="assets/images/rm-50.svg" class="prize" alt="">
+                    </div>
+                    <div class="phone-number-container">
+                        <form action="">
+                            <h5>Enter your mobile number to redeem</h5>
+                            <div class="input-container-2">
+                                <input type="text" pattern="[0-9]" name="phone" class="custom-input">
+                                <div class="button-container">
+                                    <button class="action-button" type="button">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="button-container return-btn">
+                        <button class="action-button" type="button" >Return to Main Event</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="questionModal" tabindex="-1" aria-labelledby="questionModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                        <h2>Ask the Speaker a Question</h2>
+                        <form>
+                            <textarea placeholder="Type here" name="" id="" cols="30" rows="10"></textarea>
+
+                            <div class="text-center">
+                                <div class="back-button-1">
+                                    <button class="button-modal" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/game.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            let overlay = document.querySelector(".overlay")
+            let gameChangerBtn = document.querySelector(".action-button.yellow")
+            let gameSection = document.querySelector(".game-section")
+            overlay.addEventListener("click", () => {
+                gameSection.classList.add("fading")
+                setTimeout(() => {
+                    gameSection.classList.remove("fading")
+                    gameSection.classList.remove("show")
+                }, 301);
+            })
+            gameChangerBtn.addEventListener("click", () => {
+                gameSection.classList.add("show")
+                gameSection.classList.add("showing")
+                setTimeout(() => {
+                    gameSection.classList.remove("showing")
+                }, 301);
+            })
+            
+            let rewardBox = document.querySelector(".reward-box")
+            let rewardBoxSrc = rewardBox.src
+            let rewardFlag = true
+            setInterval(() => {
+                if (rewardFlag) {
+                    rewardBox.src = rewardBoxSrc.replace("box", "box-lights")
+                    rewardFlag = false
+                }
+                else {
+                    rewardBox.src = rewardBoxSrc.replace("box-lights", "box")
+                    rewardFlag = true
+                }
+            }, 500);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Principal</title>
+</head>
+
+<body>
+    <section class="landing-section">
+        <img class="img-fluid full-width-img" src="assets/images/main-bg.png" alt="image">
+        <img class="mob-img" src="assets/images/mob-bg.png" alt="group-image">
+        <img src="assets/images/logo.png" class="top-right-logo">
+        <div class="main-content">
+            <h1 class="main-line"><img src="assets/images/lading-title.png" alt=""></h1>
+            <!-- <p class="login-time">You will be able to login on DD MM YY</p> -->
+            <div class="landing-btn">
+                <div class="back-button">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal" class="button-light">Login</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    <form id="loginForm">
+                        <div class="container">
+                            <h2>Login</h2>
+                            <div class="input-container">
+                                <input type="text" placeholder="Agent Name" name="name" id="name" required>
+                                <span class="required">*Mandatory</span>
+                            </div>
+                            <span class="error"></span>
+                            <div class="input-container">
+                                <input type="text" placeholder="Agent Code" name="agent_code" id="agent_code" required>
+                                <span class="required">*Mandatory</span>
+                            </div>
+                            <span class="error"></span>
+                            <div class="input-container">
+                                <input type="text" placeholder="Region/ State" name="state" id="state" required>
+                                <span class="required">*Mandatory</span>
+                            </div>
+                            <span class="error"></span>
+                            <div class="consent-section">
+                                <input type="checkbox" id="consent-checkbox" name="consent">
+                                <label for="consent-checkbox">By clicking ‘Submit’, you hereby agree and consent to
+                                    allow your personal data
+                                    and/or information being collected, processed and used (“processed”) by
+                                    Principal Asset Management Berhad (“Principal”) in accordance with Principal
+                                    Privacy Notice, which may be viewed at <a
+                                        href="https://www.principal.com.my/en/privacy-notice-my (“Privacy Notice”)"></a>
+                                    . In addition and without prejudice to the terms in Principal Privacy Notice,
+                                    you agree and consent to your personal data and/or information being processed
+                                    and used by Principal for the purpose of registration to Principal Q3 Agency
+                                    Kick-Off 2024.</label>
+                            </div>
+                            <span class="error"></span>
+                            <div class="text-center">
+                                <div class="back-button-1">
+                                    <button class="button-modal" type="button"
+                                        onclick="loginFormSubmit()">Submit</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
