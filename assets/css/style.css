@@ -48,10 +48,7 @@ body{
 }
 .login-time{
   color: #DCF94D;
-  position: absolute;
-  top: 68%;
-  right: 8%;
-  width: 39%;
+  width: 100%;
   font-size: 2vw;
   margin: 0;
   font-family: "FS Elliot Pro";
@@ -64,6 +61,11 @@ body{
 .landing-btn .back-button{
   margin: 0;
 }
+.landing-btn .back-button .button-light{
+    padding: .75vw 2vw;
+    font-size: 2.5vw;
+    line-height: 1.2;
+}
 .agency-bg{
   background: url(../images/main-bg.png);
   background-size: cover;
@@ -74,7 +76,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 20px 20px 0;
+  padding: 20px 10px 0;
   border-radius: 8px;
   width: 100%;
   margin: 0 auto;
@@ -88,6 +90,58 @@ body{
     accent-color: white;
 
 }
+
+/* Hide the default checkbox */
+#consent-checkbox {
+    display: none;
+}
+
+/* Style for the custom checkbox */
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    /*border: 2px solid #007bff;*/
+    display: inline-block;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    background: white;
+}
+
+/* Checkmark */
+.custom-checkbox::after {
+    content: '';
+    width: 6px;
+    height: 12px;
+    border: solid #004c97;
+    border-width: 0 2px 2px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    display: none;
+}
+
+/* Change the background of the checkbox when checked */
+#consent-checkbox:checked + .custom-checkbox {
+    background-color: #fff;
+}
+
+/* Show the checkmark when the checkbox is checked */
+#consent-checkbox:checked + .custom-checkbox::after {
+    display: block;
+}
+
+/* Style for the consent text */
+.consent-text {
+    margin-left: 8px;
+    width: calc(100% - 28px);
+}
+
+
+
+
 
 .consent-section p {
   display: inline;
@@ -174,7 +228,12 @@ form label a{
   text-align: center;
   color: #fff;
 }
-
+.modal p{
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+}
 .chat {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -449,49 +508,20 @@ form textarea {
   height: calc(100% - 80px);
   width: 100%;
 }
-.game-changer-btn{
-  all: unset;
-  display: block;
-  cursor: pointer;
-  position: relative;
-  margin-top: 20px;
-}
-.game-changer-btn .blue{
-  width: 100%;
-  position: absolute;
-  top: -5px;
-  left: 3px;
-  transition: all .3s;
-}
-.game-changer-btn .yellow{
-  width: 100%;
-  opacity: 0;
-  position: absolute;
-  top: -5px;
-  left: 3px;
-  transition: all .3s;
-}
 .button-shadow{
   width: 100%;
 }
-.game-changer-btn:hover .blue{
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-.game-changer-btn:hover .yellow{
-  top: 0;
-  left: 0;
-  opacity: 1;
-}
-.game-changer-btn:disabled{
+.button-container:disabled{
   opacity: 0.5;
+  cursor: default;
+}
+.button-container:disabled .action-button{
   cursor: default;
 }
 .winners-count-bottom{
   width: max-content;
   margin-left: auto;
-  margin-top: 15px;
+  /*margin-top: 15px;*/
   position: relative;
 }
 .winners-count-bottom span{
@@ -809,6 +839,53 @@ form textarea {
   padding: 5px 20px;
   font-size: 1.25em;
 }
+.logout-btn-container{
+  width: auto;
+}
+.logout-btn-container .action-button{
+  background-color: white;
+}
+.instrution-box{
+    padding: 10px 25px;
+    padding-bottom: 0;
+}
+.instrution-box h5{
+    color: white ;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0;
+}
+.instrution-box h5 span{
+    color: #dcf94d;
+}
+.answers-modal h6{
+  font-size: 20px;
+  color: #004C97;
+  font-weight: bold;
+  text-align: center;
+}
+.answers-btn{
+  font-size: 18px;
+  background-color: #0076CF;
+  border-radius: 25rem;
+  padding: 5px 25px;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+.answers-modal .modal-body {
+  background: #E5F4FD;
+  border-radius: 15px;
+  border: 2px solid #004C97;
+}
+#right-popup .modal-body {
+  background: #DCF94D;
+  border-radius: 15px;
+  border: 2px solid #004C97;
+}
+
 @keyframes showing {
   0%{
     opacity: 0;
@@ -835,6 +912,11 @@ form textarea {
 }
 
 @media (max-width: 991px) {
+    
+    .agency-bg{
+        background: url(../images/mob-bg.png);
+        background-size: cover;
+    }
   .button-light {
     font-size: 1.4rem;
     padding: 0.7rem 1.8rem;
@@ -941,11 +1023,26 @@ form textarea {
   .top-right-logo{
     width: 30%;
   }
+  .login-time{
+    font-size: 5vw;
+  }
+  .logout-btn-container .action-button{
+      background: white !important;
+      height: auto;
+  }
+  .logout-btn-container{
+      height: auto;
+      line-height: 1.1;
+      margin-top: 0;
+  }
+  .winners-count-bottom span{
+      font-size: 5.55vw !important;
+  }
 }
 
 /* Responsive styles */
 @media (max-width: 767px) {
-
+    
   .back-button .button-light {
     padding: 0.6rem 1.5rem;
     width: 100%;
@@ -957,6 +1054,10 @@ form textarea {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  
+  .landing-btn .back-button .button-light{
+      font-size: 28px;
   }
 
   .back-button-1 {
@@ -979,6 +1080,9 @@ form textarea {
     font-size: 1.6rem;
     color: #ffffff;
     line-height: 1.9rem;
+  }
+  .modal p{
+      font-size: 18px;
   }
 
   
@@ -1070,6 +1174,17 @@ form textarea {
   }
   .modal-body{
     border-radius: 25px;
+  }
+  .custom-checkbox{
+      width: 15px;
+      height: 15px;
+  }
+  .custom-checkbox::after{
+      width: 5px;
+      height: 8px; 
+  }
+  .consent-text{
+      width: calc(100% - 23px);
   }
 }
 
@@ -1191,4 +1306,8 @@ form textarea {
       margin-right: auto;
       margin-left: auto;
   }
+  .answers-modal .modal-dialog {
+    max-width: 286px;
+  }
+  
 }

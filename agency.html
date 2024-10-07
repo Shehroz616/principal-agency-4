@@ -55,9 +55,16 @@
                     </div>
                 </div>
             </div>
-            <div class="winners-count-bottom">
-                <img src="assets/images/winners-tag-top-right.png" alt="">
-                <span>100</span>
+            <div class="d-flex flex-wrap align-items-center mt-3">
+                <div class="button-container logout-btn-container" >
+                    <form action="{{ route('logout') }}" method="post">  
+                        <button class="action-button" type="submit">Logout</button>
+                    </form>
+                </div>
+                <div class="winners-count-bottom">
+                    <img src="assets/images/winners-tag-top-right.png" class="w-100" alt="">
+                    <span id="bottom-count">0</span>
+                </div>
             </div>
         </div>
 
@@ -295,6 +302,35 @@
         </div>
 
     </section>
+
+
+
+<div class="modal fade answers-modal" id="wrong-popup" tabindex="-1" aria-labelledby="wrong-popupLabel" aria-hidden="true" data-bs-backdrop="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h6>Sorry, wrong answer! Please try again</h6>
+                <div class="text-center">
+                    <button class="answers-btn" id="tryAgain" type="submit">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade answers-modal" id="right-popup" tabindex="-1" aria-labelledby="wrong-popupLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h6>Correct! <br> you may proceed to the next level</h6>
+                <div class="text-center">
+                    <button class="answers-btn" id="nextQuestion" type="submit">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/game.js"></script>
